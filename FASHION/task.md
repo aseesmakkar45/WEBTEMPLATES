@@ -1,0 +1,25 @@
+# Tasks - TOONI™ Reactive Fashion Website
+
+- [x] Project Setup
+  - [x] Initialize Vite + React project in the `FASHION` directory
+  - [x] Install Tailwind CSS, PostCSS, and Autoprefixer
+  - [x] Install Lucide React (for icons)
+  - [x] Configure Tailwind CSS `tailwind.config.js` with brand fonts and colors
+- [x] Base Styles and HTML Template
+  - [x] Update `index.html` to load fonts and script dependencies
+  - [x] Set up `src/index.css` with custom range styles, fonts, and animation properties
+- [x] State Management and Views
+  - [x] Set up global application state in `src/App.jsx` (views, cart, filters)
+  - [x] Create shared UI components
+    - [x] `SideNavigation` component
+    - [x] `NavigationBar` component
+    - [x] `Footer` component
+  - [x] Create page views
+    - [x] `HomeView` component (Shifted Rebellion layout)
+    - [x] `CollectionsView` component (Interactive filters + grid)
+    - [x] `ProductDetailView` component (Detailed selectors + tab controls)
+    - [x] `CartView` component (Shopping Bag items list + checkout summary)
+    - [x] `CheckoutView` component (Secure billing / delivery checkout form)
+- [x] Verification
+  - [x] Run `npm run build` to verify standard build pipeline
+  - [x] Validate reactive interactions locally (navigation, cart addition, and price computations)
