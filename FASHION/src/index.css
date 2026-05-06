@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pink: #FFC0CB;
+  --color-charcoal: #1a1a1a;
+  --color-cyan: #00FFFF;
+  --color-magenta: #FF00FF;
+  --color-yellow: #FFFF00;
+  --font-sans: 'Switzer', sans-serif;
+  --font-serif: 'Zodiak', serif;
+}
+
+
+body {
+  font-family: 'Switzer', sans-serif;
+  background-color: var(--pink);
+  color: var(--charcoal);
+  overflow-x: hidden;
+}
+
+.serif {
+  font-family: 'Zodiak', serif;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.hero-title-bg {
+  font-size: 24vw;
+  line-height: 0.8;
+  letter-spacing: -0.06em;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+  font-weight: 900;
+}
+
+.bg-pink-texture {
+  background-color: #FFC0CB;
+  background-image: radial-gradient(#1a1a1a 0.5px, transparent 0.5px);
+  background-size: 24px 24px;
+}
+
+.product-image-container {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--charcoal);
+}
+
+.product-image-container img {
+  filter: saturate(200%) contrast(125%);
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-image-container:hover img {
+  transform: scale(1.1);
+  filter: saturate(250%) contrast(130%);
+}
+
+.neon-glow-cyan {
+  filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.4));
+}
+.neon-glow-magenta {
+  filter: drop-shadow(0 0 10px rgba(255, 0, 255, 0.4));
+}
+.neon-glow-yellow {
+  filter: drop-shadow(0 0 10px rgba(255, 255, 0, 0.4));
+}
+
+.image-saturated {
+  filter: saturate(2) contrast(1.25);
+}
+
+/* Custom Range Slider Styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  background: #1a1a1a;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #1a1a1a;
+  cursor: pointer;
+  margin-top: -7px;
+  border: 2px solid #FFC0CB;
+}
+
+/* Custom Swatches and size controls */
+.color-swatch:checked + label {
+  outline: 2px solid var(--charcoal);
+  outline-offset: 2px;
+}
+
+.size-btn:checked + label {
+  background-color: var(--charcoal);
+  color: white;
+}
+
+.custom-radio:checked + label {
+  background-color: var(--charcoal);
+  color: var(--pink);
+  border-color: var(--charcoal);
+}
+
+.custom-radio:checked + label .neon-accent {
+  display: block;
+}
