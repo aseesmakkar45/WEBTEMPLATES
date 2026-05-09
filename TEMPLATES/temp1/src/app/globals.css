@@ -1,0 +1,30 @@
+@import url('https://db.onlinewebfonts.com/c/6e47ef470dd19698c911332a9b4d1cf4?family=Neue+Haas+Grotesk+Text+Pro');
+@import url('https://db.onlinewebfonts.com/c/dec0d9b4e22ca588dc20e1e2e09a59b5?family=Neue+Haas+Grotesk+Display+Pro+55+Roman');
+@import "tailwindcss";
+
+:root {
+  --dark-green: #1f2a1d;
+  --med-green: #2d3a2a;
+  --body-green: #4b5b47;
+  --heading-primary: #336443;
+  --heading-accent: #85AB8B;
+  --bottom-left: #3d5638;
+  --button-hover: #2a3827;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: 'Neue Haas Grotesk Display Pro 55 Roman', 'Neue Haas Grotesk Text Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: var(--dark-green);
+}
+
+.stagger-in {
+  transition: all 500ms ease;
+}
+
+.menu-open .mobile-link-1 { transition-delay: 150ms; }
+.menu-open .mobile-link-2 { transition-delay: 220ms; }
+.menu-open .mobile-link-3 { transition-delay: 290ms; }
+.menu-open .mobile-cta { transition-delay: 400ms; }
