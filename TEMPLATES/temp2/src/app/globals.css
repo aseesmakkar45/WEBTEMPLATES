@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Imprima&family=Viaoda+Libre&display=swap');
+@import "tailwindcss";
+
+:root {
+  --primary-bg: #0a0608;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  scroll-behavior: auto;
+  font-family: 'Imprima', sans-serif;
+  color: white;
+}
+
+.serif-font {
+  font-family: 'Viaoda Libre', serif;
+}
+
+.sans-font {
+  font-family: 'Imprima', sans-serif;
+}
+
+@keyframes bobUp {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-bob {
+  animation: bobUp 1.8s ease-in-out infinite;
+}
+
+.canvas-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  will-change: transform, opacity;
+  background-size: cover;
+  background-position: center;
+}
+
+.portal-layer {
+  background-repeat: no-repeat;
+  background-position: 52% 38%;
+  transform-origin: 52% 38%;
+}
+
+.curtain {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  z-index: 10;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-link {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+/* Hide scrollbar but keep functionality */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
